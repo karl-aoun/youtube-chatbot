@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 
-from vectorstore_manager.vectorstore_manager import VectorStore
+from src.vectorstore_manager.vectorstore_manager import VectorStore
 
 vectorstore_manager = VectorStore()
 

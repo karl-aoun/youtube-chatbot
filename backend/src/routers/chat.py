@@ -1,5 +1,5 @@
-from config import client
-from routers.vectorstore import get_context
+from src.config.config import client
+from src.routers.vectorstore import get_context
 
 def ask_ai(query: str):
     context = get_context(query)

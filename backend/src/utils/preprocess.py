@@ -4,7 +4,7 @@ import os
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
-from config import GROQ_API_KEY
+from src.config.config import GROQ_API_KEY
 
 
 def request_yt_audio(url):

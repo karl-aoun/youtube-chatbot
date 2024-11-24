@@ -1,7 +1,7 @@
 from uuid import uuid4
 from langchain_chroma import Chroma
 
-from config import embeddings
+from src.config.config import embeddings
 
 class VectorStore:
     def __init__(self):
