@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.like-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+input[type="checkbox"] {
+    display: none; /* Hide the default checkbox */
+}
+
+label.heart {
+    width: 30px;
+    height: 30px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+label.heart::before,
+label.heart::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+label.heart::before {
+    top: -15px; /* Move up to create the heart shape */
+    left: 0;
+}
+
+label.heart::after {
+    left: 15px; /* Move to the right to create the heart shape */
+    top: 0;
+}
+
+input[type="checkbox"]:checked + label.heart {
+    background-color: #ff6b81; /* Color when liked */
+}
+
+input[type="checkbox"]:checked + label.heart::before,
+input[type="checkbox"]:checked + label.heart::after {
+    background-color: #ff6b81; /* Change background color */
+    transform: scale(1.2); /* Slightly enlarge when liked */
+}
+
+span {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Add hover effect */
+.label.heart:hover {
+    background-color: #ff9999; /* Lighten on hover */
+}
